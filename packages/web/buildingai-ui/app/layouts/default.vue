@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { SpeedInsights } from "@vercel/speed-insights/vue";
 import { Style1, Style2, Style3, Style4, Style5 } from "@buildingai/layouts/web";
 import { apiGetWebLayoutConfig } from "@buildingai/service/webapi/decorate";
 import { type Component, computed } from "vue";
@@ -74,6 +75,7 @@ const navigationConfig = computed((): NavigationConfig => {
 </script>
 
 <template>
+    <SpeedInsights />
     <component :is="LayoutComponent" :navigation-config="navigationConfig">
         <slot />
     </component>
